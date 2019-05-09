@@ -6,6 +6,7 @@ public class Node {
 	private String City;
 	private Vector<Node> adjlist; //Adjacency list
 	
+	
 	//constructor
 	public Node(String city){
 		City = city;
@@ -18,15 +19,18 @@ public class Node {
 		this.City = city;
 	}
 	
+	
 	// get city
 	public String getNode() { 
 		return City;
 	}
 	
+	
 	//adds edge
 	public void addToAdjacency(Node n){
 		adjlist.add(n);
 	}
+	
 	
 	//removes edge
 	public boolean removeFromAdjacency(Node n){
@@ -36,6 +40,7 @@ public class Node {
 		}
 		return false;
 	}
+	
 	
 	//creates adjacency list String
 	public String printAdjacency() {
@@ -47,9 +52,4 @@ public class Node {
 		sb.append("");
 		return sb.toString();
 	}
-
-
-	
-	
-
 }

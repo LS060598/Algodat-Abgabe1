@@ -24,9 +24,12 @@ public class Citygraph {
 		Node bremen = new Node("bremen");
 		Node hannover = new Node("hannover");
 		Node braunschweig = new Node("braunschweig");
+		Node eschwege = new Node("eschwege");
+		
 		
 		// initializes graph
 		Graph c = new Graph();
+		
 		
 		// adds nodes to nodelist
 		c.insertNode (berlin);
@@ -50,6 +53,7 @@ public class Citygraph {
 		c.insertNode (bremen);
 		c.insertNode (hannover);
 		c.insertNode (braunschweig);
+		c.insertNode (eschwege);
 		
 		
 		//adds edges to adjlist
@@ -86,15 +90,17 @@ public class Citygraph {
 		c.insertEdge(dortmund,hannover);
 		c.insertEdge(bremen,hannover);
 		c.insertEdge(hannover,braunschweig);
+		c.insertEdge(eschwege,weimar);
 		
+		
+		// removes edge / city
+		c.removeEdge (eschwege,weimar);
+		c.removeNode (eschwege);
 		
 		
 		//prints adjacency list of graph
 		c.getAdjacencyOfGraph();
 		
 		
-		
-		
 	}
-
 }
